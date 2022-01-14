@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-function App() {
+import SelectedProductContext from "./context/context";
+import ProductDetails from "./components/ProductDetails";
+import ProductsView from "./components/ProductsView";
+
+const App = () => {
+  const theme = createTheme({
+    typography: {
+      fontFamily: "IBM Plex Sans",
+    },
+  });
+  const [selectedProduct, setSelectedProduct] = useState({});
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <SelectedProductContext.Provider
+        value={[selectedProduct, setSelectedProduct]}
+      >
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<ProductsView />} />
+            <Route path="product" element={<ProductDetails></ProductDetails>} />
+          </Routes>
+        </BrowserRouter>
+      </SelectedProductContext.Provider>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
