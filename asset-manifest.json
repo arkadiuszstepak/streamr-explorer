@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/streamr-explorer/static/css/main.83aa994d.css",
-    "main.js": "/streamr-explorer/static/js/main.8fc4c00d.js",
+    "main.js": "/streamr-explorer/static/js/main.13357c68.js",
     "index.html": "/streamr-explorer/index.html",
     "main.83aa994d.css.map": "/streamr-explorer/static/css/main.83aa994d.css.map",
-    "main.8fc4c00d.js.map": "/streamr-explorer/static/js/main.8fc4c00d.js.map"
+    "main.13357c68.js.map": "/streamr-explorer/static/js/main.13357c68.js.map"
   },
   "entrypoints": [
     "static/css/main.83aa994d.css",
-    "static/js/main.8fc4c00d.js"
+    "static/js/main.13357c68.js"
   ]
 }
