@@ -20,10 +20,10 @@ const App = () => {
       <SelectedProductContext.Provider
         value={[selectedProduct, setSelectedProduct]}
       >
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL} >
           <Routes>
-            <Route path="/" element={<ProductsView />} />
-            <Route path="product" element={<ProductDetails></ProductDetails>} />
+            <Route exact path="/" element={<ProductsView />} />
+            <Route exact  path="/product" element={<ProductDetails></ProductDetails>} />
           </Routes>
         </BrowserRouter>
       </SelectedProductContext.Provider>
