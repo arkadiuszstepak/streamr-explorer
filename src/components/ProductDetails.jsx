@@ -20,7 +20,7 @@ const ProductDetails = () => {
   const navigate = useNavigate();
   useEffect(() => {
     getStreams(product.id);
-  }, [getStreams, product.id]);
+  }, []);
 
   return (
     <div

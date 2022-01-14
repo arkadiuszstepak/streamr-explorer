@@ -33,7 +33,7 @@ const ProductsView = () => {
 
   useEffect(() => {
     getProducts(searchString, order, sortBy, category, onlyFree);
-  }, [searchString, sortBy, category, onlyFree, order,getProducts]);
+  }, [searchString, sortBy, category, onlyFree, order]);
 
   const onSearch = (e) => {
     setSearchString(e.target.value);
